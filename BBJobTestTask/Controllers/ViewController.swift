@@ -17,11 +17,13 @@ class ViewController: UIViewController {
     let monitor = NWPathMonitor()
     let queue = DispatchQueue(label: "InternetAvailabilityMonitor")
     private var sortInAlphabeticalOrder = true
+    private let refreshControl = UIRefreshControl()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         populateTable()
         configureMonitor()
+        configureRefresh()
         usersTableView.dataSource = self
         usersTableView.delegate = self
     }
@@ -39,6 +41,20 @@ class ViewController: UIViewController {
 
         sortInAlphabeticalOrder = !sortInAlphabeticalOrder
         usersTableView.reloadData()
+    }
+
+    @objc func refreshAfterPullDown(_ refreshControl: UIRefreshControl){
+        ImageProcessor.deleteAll()
+        populateTable()
+        refreshControl.endRefreshing()
+    }
+
+    func configureRefresh() {
+        usersTableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action:
+            #selector(refreshAfterPullDown(_:)),
+                                 for: UIControl.Event.valueChanged)
+        refreshControl.tintColor = UIColor.red
     }
 
     private func populateTable() {
