@@ -13,6 +13,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var usersTableView: UITableView!
 
+    @IBOutlet weak var sortButton: UIButton!
     private var users = [User]()
     let monitor = NWPathMonitor()
     let queue = DispatchQueue(label: "InternetAvailabilityMonitor")

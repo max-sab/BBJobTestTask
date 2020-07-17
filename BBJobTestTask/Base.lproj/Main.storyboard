@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cSs-Gy-9cQ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="86" width="414" height="776"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" rowHeight="92" id="5k0-g0-OEO" customClass="UserCell" customModule="BBJobTestTask" customModuleProvider="target">
@@ -56,17 +56,28 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVV-4W-9cm">
+                                <rect key="frame" x="9" y="44" width="38" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Sort">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="cSs-Gy-9cQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5Ed-Ry-rpy"/>
+                            <constraint firstItem="cSs-Gy-9cQ" firstAttribute="top" secondItem="fVV-4W-9cm" secondAttribute="bottom" constant="8" id="9j0-cG-v3w"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cSs-Gy-9cQ" secondAttribute="trailing" id="IrU-6c-mpu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="fVV-4W-9cm" secondAttribute="top" id="PjU-Zv-X2w"/>
+                            <constraint firstItem="fVV-4W-9cm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="9" id="TbF-B1-asE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cSs-Gy-9cQ" secondAttribute="bottom" id="d9j-hu-rTu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fVV-4W-9cm" secondAttribute="trailing" constant="359" id="uEf-In-tej"/>
                             <constraint firstItem="cSs-Gy-9cQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wNY-rR-acW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="sortButton" destination="fVV-4W-9cm" id="RSu-ye-Poj"/>
                         <outlet property="usersTableView" destination="cSs-Gy-9cQ" id="Ee3-Ff-18R"/>
                     </connections>
                 </viewController>
