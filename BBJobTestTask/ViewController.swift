@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         populateTable()
+        usersTableView.dataSource = self
+        usersTableView.delegate = self
     }
 
     private func populateTable() {
