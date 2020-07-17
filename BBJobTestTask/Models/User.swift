@@ -8,6 +8,16 @@
 
 import Foundation
 
+struct UserWrapper: Decodable {
+    let users: [User]
+}
+
+extension UserWrapper {
+    enum CodingKeys: String, CodingKey {
+        case users = "data"
+    }
+}
+
 struct User: Decodable {
     let firstName: String
     let lastName: String
