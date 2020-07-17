@@ -16,7 +16,7 @@ class UserCell: UITableViewCell {
 
     func setUser(_ user: User) {
 
-        nameLabel.text = user.lastName + " " + user.firstName
+        nameLabel.text = user.firstName + " " + user.lastName
         ImageProcessor.getImage(withUrl: user.avatar) { avatar in
             self.avatarImageView.image = avatar
             self.avatarImageView.setRounded()

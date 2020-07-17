@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -34,7 +34,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXo-gu-JVn">
-                                                    <rect key="frame" x="100" y="33" width="314" height="26.5"/>
+                                                    <rect key="frame" x="100" y="32.666666666666664" width="314" height="27"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -72,7 +72,56 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+            <point key="canvasLocation" x="12" y="100"/>
+        </scene>
+        <!--Detailed Info View Controller-->
+        <scene sceneID="uTS-HQ-Tzd">
+            <objects>
+                <viewController storyboardIdentifier="DetailedInfoVC" id="qk1-bX-ey9" customClass="DetailedInfoViewController" customModule="BBJobTestTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Lh-pg-pvd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPw-dy-Ybo">
+                                <rect key="frame" x="181" y="434" width="53" height="44"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h9e-bL-iTx">
+                                <rect key="frame" x="82" y="44" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Lg5-5X-4mf"/>
+                                    <constraint firstAttribute="height" constant="250" id="P0m-nC-er4"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSK-tL-QNj">
+                                <rect key="frame" x="181" y="344" width="53" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="h9e-bL-iTx" firstAttribute="centerX" secondItem="GVZ-2s-Led" secondAttribute="centerX" id="Jmb-Ty-H6P"/>
+                            <constraint firstItem="vSK-tL-QNj" firstAttribute="centerX" secondItem="GVZ-2s-Led" secondAttribute="centerX" id="K0M-d8-uVT"/>
+                            <constraint firstItem="lPw-dy-Ybo" firstAttribute="centerX" secondItem="GVZ-2s-Led" secondAttribute="centerX" id="VKT-0E-kbI"/>
+                            <constraint firstItem="h9e-bL-iTx" firstAttribute="top" secondItem="GVZ-2s-Led" secondAttribute="top" id="pK7-gH-qpV"/>
+                            <constraint firstItem="vSK-tL-QNj" firstAttribute="top" secondItem="h9e-bL-iTx" secondAttribute="bottom" constant="50" id="pbT-Gi-qbK"/>
+                            <constraint firstItem="lPw-dy-Ybo" firstAttribute="top" secondItem="vSK-tL-QNj" secondAttribute="bottom" constant="42" id="qk7-Ae-enp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GVZ-2s-Led"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="lPw-dy-Ybo" id="x2d-6F-dEj"/>
+                        <outlet property="nameLabel" destination="vSK-tL-QNj" id="bcf-yY-Gqb"/>
+                        <outlet property="userAvatar" destination="h9e-bL-iTx" id="lXD-8m-Atf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9xF-ch-YbV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1034.7826086956522" y="99.776785714285708"/>
         </scene>
     </scenes>
 </document>

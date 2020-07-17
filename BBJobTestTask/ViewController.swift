@@ -75,5 +75,22 @@ extension ViewController: UITableViewDelegate {
 
         return cell
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        usersTableView.deselectRow(at: indexPath, animated: true)
+
+        let detailedInfoViewController = self.storyboard!.instantiateViewController(withIdentifier: "DetailedInfoVC") as! DetailedInfoViewController
+
+        let image = (tableView.cellForRow(at: indexPath) as! UserCell).avatarImageView.image
+
+        detailedInfoViewController.user = users[indexPath.row]
+        if let image = image {
+            detailedInfoViewController.userImage = image
+        }
+
+        self.present(detailedInfoViewController, animated: true, completion: nil)
+
+    }
 }
 
