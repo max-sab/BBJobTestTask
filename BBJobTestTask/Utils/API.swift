@@ -1,5 +1,5 @@
 //
-//  User.swift
+//  API.swift
 //  BBJobTestTask
 //
 //  Created by Maksym Sabadyshyn on 7/16/20.
@@ -8,10 +8,6 @@
 
 import Foundation
 
-struct User: Decodable {
-    let firstName: String
-    let lastName: String
-    let avatar: String
-    let id: Int
-    let email: String
+enum API {
+    static let link = "https://reqres.in/api/users?page=2"
 }

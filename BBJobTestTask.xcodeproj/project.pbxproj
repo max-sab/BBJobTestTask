@@ -16,6 +16,8 @@
 		5016D2CD24C0DE8F0086D255 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016D2CC24C0DE8F0086D255 /* UserCell.swift */; };
 		5016D2CF24C0EC7B0086D255 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016D2CE24C0EC7B0086D255 /* ImageProcessor.swift */; };
 		5016D2D324C0ED150086D255 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016D2D224C0ED150086D255 /* User.swift */; };
+		5016D2D624C0F5950086D255 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016D2D524C0F5950086D255 /* API.swift */; };
+		5016D2D824C0F68D0086D255 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016D2D724C0F68D0086D255 /* NetworkRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		5016D2CC24C0DE8F0086D255 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		5016D2CE24C0EC7B0086D255 /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
 		5016D2D224C0ED150086D255 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5016D2D524C0F5950086D255 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		5016D2D724C0F68D0086D255 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 		5016D2B724C0DC3C0086D255 /* BBJobTestTask */ = {
 			isa = PBXGroup;
 			children = (
+				5016D2D424C0F58A0086D255 /* Utils */,
 				5016D2D124C0ED070086D255 /* Models */,
 				5016D2D024C0ECF40086D255 /* Views */,
 				5016D2B824C0DC3C0086D255 /* AppDelegate.swift */,
@@ -71,7 +76,6 @@
 				5016D2C124C0DC430086D255 /* Assets.xcassets */,
 				5016D2C324C0DC430086D255 /* LaunchScreen.storyboard */,
 				5016D2C624C0DC430086D255 /* Info.plist */,
-				5016D2CE24C0EC7B0086D255 /* ImageProcessor.swift */,
 			);
 			path = BBJobTestTask;
 			sourceTree = "<group>";
@@ -90,6 +94,16 @@
 				5016D2D224C0ED150086D255 /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5016D2D424C0F58A0086D255 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5016D2CE24C0EC7B0086D255 /* ImageProcessor.swift */,
+				5016D2D524C0F5950086D255 /* API.swift */,
+				5016D2D724C0F68D0086D255 /* NetworkRequest.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,10 +179,12 @@
 			files = (
 				5016D2CD24C0DE8F0086D255 /* UserCell.swift in Sources */,
 				5016D2BD24C0DC3C0086D255 /* ViewController.swift in Sources */,
+				5016D2D824C0F68D0086D255 /* NetworkRequest.swift in Sources */,
 				5016D2D324C0ED150086D255 /* User.swift in Sources */,
 				5016D2CF24C0EC7B0086D255 /* ImageProcessor.swift in Sources */,
 				5016D2B924C0DC3C0086D255 /* AppDelegate.swift in Sources */,
 				5016D2BB24C0DC3C0086D255 /* SceneDelegate.swift in Sources */,
+				5016D2D624C0F5950086D255 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

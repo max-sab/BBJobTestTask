@@ -9,15 +9,15 @@
 import UIKit
 import Foundation
 
-class PersonCell: UITableViewCell {
+class UserCell: UITableViewCell {
 
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
 
-    func setPerson(_ person: Person) {
+    func setUser(_ user: User) {
 
-        nameLabel.text = person.lastName + " " + person.firstName
-        ImageProcessor.getImage(withUrl: person.avatarURL) { avatar in
+        nameLabel.text = user.lastName + " " + user.firstName
+        ImageProcessor.getImage(withUrl: user.avatar) { avatar in
             self.avatarImageView.image = avatar
             self.avatarImageView.setRounded()
         }
