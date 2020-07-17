@@ -12,18 +12,33 @@ import Network
 class ViewController: UIViewController {
 
     @IBOutlet weak var usersTableView: UITableView!
-
     @IBOutlet weak var sortButton: UIButton!
     private var users = [User]()
     let monitor = NWPathMonitor()
     let queue = DispatchQueue(label: "InternetAvailabilityMonitor")
-    
+    private var sortInAlphabeticalOrder = true
+
     override func viewDidLoad() {
         super.viewDidLoad()
         populateTable()
         configureMonitor()
         usersTableView.dataSource = self
         usersTableView.delegate = self
+    }
+
+    @IBAction func sortButtonPressed(_ sender: UIButton) {
+        if sortInAlphabeticalOrder {
+            users = users.sorted {
+                return $0.firstName < $1.firstName
+            }
+        } else {
+            users = users.sorted {
+                return $0.firstName > $1.firstName
+            }
+        }
+
+        sortInAlphabeticalOrder = !sortInAlphabeticalOrder
+        usersTableView.reloadData()
     }
 
     private func populateTable() {

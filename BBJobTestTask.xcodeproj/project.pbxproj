@@ -68,17 +68,16 @@
 		5016D2B724C0DC3C0086D255 /* BBJobTestTask */ = {
 			isa = PBXGroup;
 			children = (
+				50A5DF4224C1F7DE000043A8 /* Controllers */,
 				5016D2D424C0F58A0086D255 /* Utils */,
 				5016D2D124C0ED070086D255 /* Models */,
 				5016D2D024C0ECF40086D255 /* Views */,
 				5016D2B824C0DC3C0086D255 /* AppDelegate.swift */,
 				5016D2BA24C0DC3C0086D255 /* SceneDelegate.swift */,
-				5016D2BC24C0DC3C0086D255 /* ViewController.swift */,
 				5016D2BE24C0DC3C0086D255 /* Main.storyboard */,
 				5016D2C124C0DC430086D255 /* Assets.xcassets */,
 				5016D2C324C0DC430086D255 /* LaunchScreen.storyboard */,
 				5016D2C624C0DC430086D255 /* Info.plist */,
-				50A5DF4024C1E2F2000043A8 /* DetailedInfoViewController.swift */,
 			);
 			path = BBJobTestTask;
 			sourceTree = "<group>";
@@ -107,6 +106,15 @@
 				5016D2D724C0F68D0086D255 /* NetworkRequest.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		50A5DF4224C1F7DE000043A8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5016D2BC24C0DC3C0086D255 /* ViewController.swift */,
+				50A5DF4024C1E2F2000043A8 /* DetailedInfoViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
