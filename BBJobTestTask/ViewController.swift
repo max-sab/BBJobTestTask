@@ -7,16 +7,20 @@
 //
 
 import UIKit
+import Network
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var usersTableView: UITableView!
 
     private var users = [User]()
+    let monitor = NWPathMonitor()
+    let queue = DispatchQueue(label: "InternetAvailabilityMonitor")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         populateTable()
+        configMonitor()
         usersTableView.dataSource = self
         usersTableView.delegate = self
     }
@@ -56,6 +60,22 @@ class ViewController: UIViewController {
                 }
             }
         })
+    }
+
+    func configMonitor() {
+        monitor.pathUpdateHandler = { pathUpdateHandler in
+            if pathUpdateHandler.status == .unsatisfied {
+
+                //show alert if there is no internet connection on the phone.
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title: "No Internet Connection", message: "Please, connect to Internet to use latest data", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                    self.present(alert, animated: true)
+                }
+            }
+
+        }
+        monitor.start(queue: queue)
     }
 }
 
