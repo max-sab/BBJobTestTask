@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         populateTable()
-        configMonitor()
+        configureMonitor()
         usersTableView.dataSource = self
         usersTableView.delegate = self
     }
@@ -62,7 +62,7 @@ class ViewController: UIViewController {
         })
     }
 
-    func configMonitor() {
+    func configureMonitor() {
         monitor.pathUpdateHandler = { pathUpdateHandler in
             if pathUpdateHandler.status == .unsatisfied {
 
