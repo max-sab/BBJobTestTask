@@ -90,7 +90,13 @@ extension ViewController: UITableViewDelegate {
         }
 
         self.present(detailedInfoViewController, animated: true, completion: nil)
+    }
 
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            users.remove(at: indexPath.row)
+            tableView.deleteRows(at: [(indexPath as IndexPath)], with: .fade)
+        }
     }
 }
 
